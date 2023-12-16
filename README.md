@@ -11,9 +11,9 @@ A simple CRUD REST API built with Spring Boot for managing user data.
 - PostgreSQL
 - Spring Data JPA
 - Spring HATEOAS
-- Springfox (Swagger) for API documentation
+- Swagger for API documentation
 - Lombok
-- Problem Spring Web for exception handling
+- Problem for exception handling
 - BDDMockito
 - JUnit
 
