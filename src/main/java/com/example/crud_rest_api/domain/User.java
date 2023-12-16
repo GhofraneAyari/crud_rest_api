@@ -1,5 +1,4 @@
 package com.example.crud_rest_api.domain;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import jakarta.persistence.*;

@@ -2,7 +2,9 @@ package com.example.crud_rest_api.service;
 
 import com.example.crud_rest_api.domain.User;
 import com.example.crud_rest_api.repository.UserRepository;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 import java.util.Optional;
@@ -21,13 +23,11 @@ public class UserServiceImpl implements UserService {
         return userRepository.findAll();
     }
 
-
     @Override
     public User getUserById(Long userId) {
         Optional<User> userOptional = userRepository.findById(userId);
-        return userOptional.orElse(null);
+        return userOptional.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found with ID: " + userId));
     }
-
 
     @Override
     public User createUser(User user) {
@@ -48,9 +48,7 @@ public class UserServiceImpl implements UserService {
 
             return userRepository.save(existingUser);
         } else {
-//            throw new UserNotFoundException(userId);
-
-            return null;
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found with ID: " + userId);
         }
     }
 

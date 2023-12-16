@@ -1,7 +1,5 @@
 package com.example.crud_rest_api.exception;
-
 import org.zalando.problem.AbstractThrowableProblem;
-import org.zalando.problem.Status;
 
 import java.net.URI;
 

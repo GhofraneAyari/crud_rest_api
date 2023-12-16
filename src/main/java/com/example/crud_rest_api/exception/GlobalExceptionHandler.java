@@ -1,5 +1,4 @@
 package com.example.crud_rest_api.exception;
-
 import jakarta.validation.ConstraintViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,7 +10,6 @@ import org.zalando.problem.Status;
 
 @ControllerAdvice
 public class GlobalExceptionHandler {
-
 
 
     @ExceptionHandler(UserNotFoundException.class)
@@ -31,7 +29,6 @@ public class GlobalExceptionHandler {
     }
 
 
-
     @ExceptionHandler(ConstraintViolationException.class)
     public ResponseEntity<Problem> handleConstraintViolationException(ConstraintViolationException e) {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST)
@@ -41,7 +38,6 @@ public class GlobalExceptionHandler {
                         .withDetail("Validation failed")
                         .build());
     }
-
 
 
 }
