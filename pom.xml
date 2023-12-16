@@ -81,21 +81,26 @@
 		</dependency>
 
 
-		<!--		<dependency>-->
-<!--			<groupId>org.zalando</groupId>-->
-<!--			<artifactId>problem</artifactId>-->
-<!--			<version>0.27.1</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>org.zalando</groupId>-->
-<!--			<artifactId>jackson-datatype-problem</artifactId>-->
-<!--			<version>0.27.1</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>org.zalando</groupId>-->
-<!--			<artifactId>problem-gson</artifactId>-->
-<!--			<version>0.27.1</version>-->
-<!--		</dependency>-->
+				<dependency>
+			<groupId>org.zalando</groupId>
+			<artifactId>problem</artifactId>
+			<version>0.27.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.zalando</groupId>
+			<artifactId>jackson-datatype-problem</artifactId>
+			<version>0.27.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.zalando</groupId>
+			<artifactId>problem-gson</artifactId>
+			<version>0.27.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.zalando</groupId>
+			<artifactId>problem-spring-web</artifactId>
+			<version>0.29.1</version>
+		</dependency>
 
 	</dependencies>
 

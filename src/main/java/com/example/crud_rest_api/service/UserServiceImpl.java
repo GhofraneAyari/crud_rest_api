@@ -1,9 +1,7 @@
 package com.example.crud_rest_api.service;
 
 import com.example.crud_rest_api.domain.User;
-//import com.example.crud_rest_api.exception.UserNotFoundException;
 import com.example.crud_rest_api.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -23,17 +21,13 @@ public class UserServiceImpl implements UserService {
         return userRepository.findAll();
     }
 
-//    @Override
-//    public User getUserById(Long userId) {
-//        Optional<User> userOptional = userRepository.findById(userId);
-//        return userOptional.orElseThrow(() -> new UserNotFoundException(userId));
-//    }
 
     @Override
     public User getUserById(Long userId) {
         Optional<User> userOptional = userRepository.findById(userId);
         return userOptional.orElse(null);
     }
+
 
     @Override
     public User createUser(User user) {

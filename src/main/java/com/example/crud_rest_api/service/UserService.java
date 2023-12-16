@@ -1,7 +1,6 @@
 package com.example.crud_rest_api.service;
 
 import com.example.crud_rest_api.domain.User;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
